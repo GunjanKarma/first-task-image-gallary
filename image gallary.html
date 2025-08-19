@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="navbar">
+  <nav>
+    <ul>
+      <li><a href="#"> Home</a></li>
+       <li><a href="#"> New</a></li>
+        <li><a href="#"> gallary</a></li>
+         <li><a href="#"> Download</a></li>
+    </ul>
+  </nav>
+  </div>
+  
+  
+  
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      body{
+        margin: 0%;
+        background-color: gray;
+      }
+      .navbar{
+        background-color:#594848;
+        width: 2000px;
+        height: 100px;
+  }
+  ul{
+  margin: 0%;
+  padding: 0%;
+  list-style: none;
+
+  
+  }
+  li{
+  float: left;
+  }
+
+
+
+  
+  
+    
+
+
+    a{
+        display: inline-block;
+        padding: 10px 20px;
+        width: 200px;
+        font-size:17px ;
+        color:white ;
+        font-family:arial ;
+        text-decoration: none;
+        text-align: center;
+        padding: 40px 10px;
+        bottom: 10px;
+
+      }
+       a:hover{
+    background-color: rgb(81, 81, 190);
+    color: black;
+       }
+  
+       
+  
+
+      .container{
+        max-width: 2000px;
+        margin: auto;
+        background-color: aliceblue;
+        
+
+        
+  
+        text-align: center;
+        
+    overflow: auto;
+      }
+      img{
+        text-align: center;
+        background-color: aliceblue;
+        backdrop-filter:inherit;
+        
+    
+        display: inline-block;
+        background-image: url("buenos.webp");
+
+        
+        height: auto;
+        justify-items: baseline;
+        ruby-span: 10px;
+  border-color: white;
+  width: 600px;
+  height: 400px;
+
+
+    
+      }
+      img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+      
+      footer{
+        padding: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        font-style: normal;
+        text-align: center;
+        background-color: #594848;
+        color: aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 1px;
+      }
+      .lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(219, 10, 10, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+}
+      
+/*.navbar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}*/
+/*@media screen and (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+};*/
+
+
+
+
+  
+
+
+      
+      
+  
+
+    </style>
+    
+
+  
+
+  </div>
+  <div class="container">
+<!--<div class="gallary">
+  <img src="socials.webp">
+  <div class="desc"> Add a describe of the image here</div>
+  <div class="gallary">
+    <img src="shutterstoc.jpg">
+    <div class="desc">Add a describe of the image here</div>
+    <div class="gallary">
+      <img src="Unsplash.jpeg">
+      <div class="desc"> Add a describe of the image here</div>
+      </div>
+    </div>-->
+    <div class="gallary">
+  
+    <img src="buenos.webp" class="gallery-item nature" alt="Nature 1" onclick="openLightbox(this)">
+    
+    
+    
+  
+  
+    <img src="img_5terre.jpg" class="gallery-item city" alt="City 1" onclick="openLightbox(this)">
+  
+
+    
+
+    
+    <img src="salubrious.webp" class="gallery-item city" alt="City 2" onclick="openLightbox(this)">
+    
+
+    <br>
+    <br>
+    
+    
+ <img src="shutterstoc.jpg" class="gallery-item city" alt="City 2" onclick="openLightbox(this)">"
+
+ 
+  <img src="socials.webp" class="gallery-item city" alt="City 2" onclick="openLightbox(this)">
+
+  
+    
+   <img src="creative-digital.webp" class="gallery-item city" alt="City 2" onclick="openLightbox(this)"> 
+  
+
+
+    
+    
+
+   </div> 
+  </div>
+  <footer>
+    All right reseved web master
+  </footer>
+
+   lightbox
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="Large View">
+    <button class="nav-btn prev" onclick="changeImage(-1)">❮</button>
+    <button class="nav-btn next" onclick="changeImage(1)">❯</button>
+  </div>
+  <script src="first24.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
+
+
+
+  
